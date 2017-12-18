@@ -11,7 +11,7 @@ import openDASH from 'opendash';
 {{ opendash-template-custom-data-adapter-app-i }}
 
 // Widgets:
-{{ opendash-template-custom-data-widgets-app-i }}
+{{ opendash-template-custom-widgets-app-i }}
 
 const instance = new openDASH();
 
