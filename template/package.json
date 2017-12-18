@@ -7,7 +7,6 @@
     "watch": "opendash build -ws"
   },
   "dependencies": {
-    "@opendash/user-adapter-local": "^1.0.0",
     {{ opendash-template-custom-user-adapter-pkg }}
     {{ opendash-template-custom-data-adapter-pkg }}
     {{ opendash-template-custom-widgets-pkg }}
