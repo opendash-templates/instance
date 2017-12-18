@@ -5,23 +5,23 @@ import '../scss/style.scss';
 import openDASH from 'opendash';
 
 // User Adapter:
-/*! opendash-template-custom-user-adapter-app-i !*/
+{{ opendash-template-custom-user-adapter-app-i }}
 
 // Data Adapter:
-/*! opendash-template-custom-data-adapter-app-i !*/
+{{ opendash-template-custom-data-adapter-app-i }}
 
 // Widgets:
-/*! opendash-template-custom-data-widgets-app-i !*/
+{{ opendash-template-custom-data-widgets-app-i }}
 
 const instance = new openDASH();
 
 // instance.env('OD-EVENTS-LOG', true);
 
-/*! opendash-template-custom-user-adapter-app !*/
+{{ opendash-template-custom-user-adapter-app }}
 
-/*! opendash-template-custom-data-adapter-app !*/
+{{ opendash-template-custom-data-adapter-app }}
 
-/*! opendash-template-custom-widgets-app !*/
+{{ opendash-template-custom-widgets-app }}
 
 // App initialisieren:
 instance.start();
