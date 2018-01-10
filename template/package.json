@@ -7,6 +7,7 @@
     "watch": "opendash build -ws"
   },
   "dependencies": {
+    "@opendash/style": "*",
     {{ opendash-template-custom-user-adapter-pkg }}
     {{ opendash-template-custom-data-adapter-pkg }}
     {{ opendash-template-custom-widgets-pkg }}

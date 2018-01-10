@@ -4,6 +4,12 @@ import '../scss/style.scss';
 // open.DASH:
 import openDASH from 'opendash';
 
+// Plugins:
+import eudPlugin from 'opendash/plugins/eud';
+
+// Translations:
+import deTranslation from 'opendash/translations/de';
+
 // User Adapter:
 {{ opendash-template-custom-user-adapter-app-i }}
 
@@ -14,6 +20,15 @@ import openDASH from 'opendash';
 {{ opendash-template-custom-widgets-app-i }}
 
 const instance = new openDASH();
+
+// Config:
+// instance.env('OD-EVENTS-LOG', true);
+
+// Plugins:
+instance.use(eudPlugin);
+
+// Translations:
+instance.registerTranslation(deTranslation)
 
 // instance.env('OD-EVENTS-LOG', true);
 
