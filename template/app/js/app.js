@@ -30,8 +30,6 @@ instance.use(eudPlugin);
 // Translations:
 instance.registerTranslation(deTranslation)
 
-// instance.env('OD-EVENTS-LOG', true);
-
 {{ opendash-template-custom-user-adapter-app }}
 
 {{ opendash-template-custom-data-adapter-app }}
