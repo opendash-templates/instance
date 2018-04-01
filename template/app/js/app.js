@@ -5,7 +5,7 @@ import '../scss/style.scss';
 import instance from 'opendash';
 
 // Plugins:
-import eudPlugin from 'opendash/plugins/eud';
+// import eudPlugin from 'opendash/plugins/eud';
 
 // Translations:
 import deTranslation from 'opendash/translations/de';
@@ -23,7 +23,7 @@ import deTranslation from 'opendash/translations/de';
 // instance.env('OD-EVENTS-LOG', true);
 
 // Plugins:
-instance.use(eudPlugin);
+// instance.use(eudPlugin);
 
 // Translations:
 instance.registerTranslation(deTranslation)
