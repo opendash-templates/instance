@@ -1,41 +1,39 @@
-export default ($injector) => {
+import _ from 'lodash';
+import moment from 'moment';
 
-    const moment = $injector.get('moment');
-    const _ = $injector.get('lodash');
+export default class DataAdapter {
 
-    return {
-        init(ctx, resolve, reject) {
-            let items = [];
+    async init(ctx) {
+        let items = [];
 
-            items.forEach(item => {
-                if (isLeaf(item)) {
-                    ctx.create(item);
-                } else {
-                    ctx.createContainer(item);
-                }
-            });
-
-            resolve();
-
-            function isLeaf(item) {
-                return item.value;
+        items.forEach(item => {
+            if (isLeaf(item)) {
+                ctx.create(item);
+            } else {
+                ctx.createContainer(item);
             }
-        },
-        history(ctx, resolve, reject, options) {
-            const result = [];
+        });
 
-            if (options) {
-                if (options.start && options.end) {
-                }
+        function isLeaf(item) {
+            return item.value;
+        }
+    }
 
-                if (options.since) {
-                }
+    async history(ctx, options) {
+        const result = [];
+
+        if (options) {
+            if (options.start && options.end) {
             }
 
-            resolve(result);
-        },
-        update(ctx, resolve, reject, payload) {
-            reject('Not supported.');
-        },
-    };
+            if (options.since) {
+            }
+        }
+
+        return result;
+    }
+
+    async update(ctx, payload) {
+        throw new Error('Not supported.');
+    }
 }

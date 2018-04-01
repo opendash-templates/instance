@@ -2,7 +2,7 @@
 import '../scss/style.scss';
 
 // open.DASH:
-import openDASH from 'opendash';
+import instance from 'opendash';
 
 // Plugins:
 import eudPlugin from 'opendash/plugins/eud';
@@ -18,8 +18,6 @@ import deTranslation from 'opendash/translations/de';
 
 // Widgets:
 {{ opendash-template-custom-widgets-app-i }}
-
-const instance = new openDASH();
 
 // Config:
 // instance.env('OD-EVENTS-LOG', true);
